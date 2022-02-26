@@ -1,0 +1,1259 @@
+/*=======================================
+=            Global Settings            =
+=========================================*/
+
+
+/*----------  Loading Fonts Web  ----------*/
+
+
+@font-face {
+
+    font-family: 'Poppins';
+    src: url('../assets/fonts/Poppins-Regular.woff2') format('woff2'), url('../assets/fonts/Poppins-Regular.woff') format('woff');
+    font-weight: 600px;
+    font-style: normal;
+
+}
+
+
+/*----------  Settings Values  ----------*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+}
+
+html {
+
+    font-size: 15px;
+
+}
+
+/*----------  Declarations Variable  ----------*/
+
+:root {
+    /*Color text*/
+    --text-dark: #000000;
+    --text-shiny: #41DD97;
+    --text-light: #FFFFFF;
+
+    /*Backgrounds*/
+    --bg-header: #01022E;
+    --bg-pricing: var(--bg-header);
+    --bg-drawflow: var(--bg-header);
+    --bg-footer: var(--bg-header);
+    --bg-banner-suscribe: var(--text-dark);
+    --bg-dropdown-menu: var(--text-light);
+
+    /*Buttons*/
+    --bg-btn-slider: var(--bg-header);
+    --bg-btn-contact: var(--text-shiny);
+    --bg-btn-get-started: var(--bg-btn-contact);
+    --bg-btn-suscribe: #0070FF;
+    --bg-btn-header: #4800FF;
+    --bg-btn-header-hover: #6D33FD;
+
+    /*Rectangules Decorations*/
+    --bg-satisfaction: #FF649E;
+    --bg-reals: #5584EB;
+    --bg-Engagement: #FFBB00;
+
+    /*Links*/
+    --color-links: #FFBB00;
+
+}
+
+
+/*----------  Reset A links  ----------*/
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/*----------  Reset A li  ----------*/
+
+li {
+    list-style: none;
+}
+
+
+*:focus {
+    outline: none;
+}
+
+/*=====  End of Global Settings  ======*/
+
+
+
+/*============================
+=            Menu            =
+==============================*/
+
+
+/*----------  Creating Background  ----------*/
+
+.bg-dark {
+    background-color: var(--bg-header);
+    color: var(--text-light);
+}
+
+#header {
+    height: 112.84930555555556px;
+}
+
+#header-mobile {
+    display: none;
+}
+
+/*----------  Overlay Container  ----------*/
+
+.container-header {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between !important;
+    align-items: center;
+
+    margin-left: 74.6111111111px;
+    margin-right: 74.6111111111px;
+}
+
+/*----------  Navar links In Row ----------*/
+
+nav {
+    display: flex;
+    max-width: 100%;
+    margin-top: 0;
+    padding-right: 0;
+    padding-left: 0;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.nav-pc>ul {
+
+    display: flex;
+    margin-left: 76px;
+}
+
+
+
+.nav-link {
+    list-style: none;
+    margin-right: 40px;
+    font-size: 0.8rem;
+}
+
+
+
+/*----------  Dropdown Icons  ----------*/
+
+.dropdown-icon>a:after {
+    margin-left: 5px;
+    content: url('../assets/images/Rectangle.svg');
+
+}
+
+.dropdown-icon>a:hover:after {
+    /* fill: var(--color-links); */
+    filter: invert(27%) sepia(51%) saturate(2878%);
+}
+
+
+/*----------  Dropdown Menu  ----------*/
+
+.dropdown-menu {
+    display: none;
+}
+
+.nav-link:hover .dropdown-menu {
+    position: absolute;
+    display: inline-block;
+    min-width: 140px;
+    margin-left: -136px;
+    background-color: var(--text-light);
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0px 1.4px 1.4px 1.4px rgba(0, 0, 0, 0.1);
+    padding-top: 1.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1.5rem;
+    align-items: center;
+    color: var(--text-dark);
+}
+
+
+.nav-link:hover .dropdown-menu:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    left: 120px;
+    top: -15px;
+    border: 10px solid transparent;
+    border-bottom-color: var(--bg-dropdown-menu);
+
+}
+
+.dropdown-menu li a {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.dropdown-menu li {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.dropdown-menu li:hover {
+    border-radius: 5px;
+    /* box-shadow: 1.4px 1.4px 1.4px 1.4px rgba(0, 0, 0, 0.1); */
+}
+
+.dropdown-menu li a {
+    height: 28px;
+}
+
+
+.dropdown-menu li:hover .arrow {
+
+    display: block;
+    transform: rotate(-90deg);
+}
+
+.dropdown-menu li:hover .info-submenu {
+    margin-right: 0px;
+}
+
+.img-dropdown-menu {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.img-dropdown-menu>img {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.info-submenu {
+    margin-left: 32px;
+    margin-right: 35px;
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.img-dropdown-menu~.info-submenu {
+    margin-left: 4px;
+}
+
+
+.arrow {
+    display: none;
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-top: auto;
+    margin-bottom: auto;
+    content: url('../assets/images/Rectangle-pink.svg');
+}
+
+
+
+.dropdown-menu a {
+    color: var(--text-dark) !important;
+}
+
+
+/*----------  Container Header  ----------*/
+
+.container-header>.container>button {
+    width: 160.4138888888889px;
+    height: 50.3625px;
+    background-color: var(--bg-btn-header);
+    color: var(--text-light);
+    border-radius: 4.663194444444444px;
+    border-style: none !important;
+}
+
+.container-header>.container>button:hover {
+    cursor: pointer;
+    background-color: var(--bg-btn-header-hover);
+}
+
+.container>a {
+    margin-right: 10px;
+    font-size: 14.922222222222222px;
+}
+
+.container>a:hover,
+nav>ul a:hover {
+
+    color: var(--color-links);
+
+}
+
+
+/*=====  End of Menu  ======*/
+
+
+
+/*=====================================
+=            Get Attention            =
+=======================================*/
+
+
+/*----------  Creating Background  ----------*/
+
+.bg-light {
+    background-color: #FFFF;
+}
+
+
+/*----------  Get Attention  ----------*/
+
+#get-attention {
+    display: block;
+    width: 100%;
+
+
+}
+
+.container-get-attention {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/*----------  TEXT  ----------*/
+
+.container-get-attention>.capture-text {
+    width: 60%;
+    display: inline-block;
+}
+
+.capture-text>.cap-title {
+
+    margin-top: 12.5031024%;
+    margin-left: 9.25924547%;
+    width: 78.587963%;
+    height: 26.0658341%;
+}
+
+.cap-title>h3 > b{
+
+    font-size: 2.3em;
+    line-height: 1.5em;
+    text-align: left;
+    vertical-align: top;
+}
+
+.cap-title>h3:last-child {
+    color: var(--text-shiny);
+}
+
+.capture-text>.p-text {
+    margin-top: 1.851576073472%;
+    margin-left: 9.25924547%;
+    width: 64.70%;
+    height: 25.22%;
+    font-size: 1.2em;
+    line-height: 2.1em;
+}
+
+.get-email {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10%;
+    margin-left: 74.6111111111px;
+    width: 77.4%;
+    height: 12%;
+    background-color: white;
+    border: solid #475a6998;
+    border-width: 0.9px;
+    border-radius: 4.66319444px;
+    padding-right: 8.39375px;
+
+}
+
+.get-email>input {
+    width: 56%;
+    height: 90%;
+    border: none;
+    font-size: 14.922222222222222px;
+    padding-left: 30px;
+}
+
+.get-email>button {
+    height: 75.1311148828%;
+    width: 42.8031916012%;
+    background-color: var(--bg-btn-contact);
+    border: transparent;
+    border-radius: 4.663194444444444px;
+    font-size: 14.922222222222222px;
+
+    font-weight: bold;
+}
+
+/*----------  Girl Writing  ----------*/
+
+.girl-writing-mobile {
+    display: none;
+}
+
+.container-get-attention>.girl-writing {
+    width: 51%;
+    height: 100%;
+    overflow: hidden !important; 
+}
+
+
+.messages {
+    position: relative;
+    margin-top: 5% !important;
+    width: 980px;
+    height: 78vh;
+    overflow:hidden;
+
+}
+
+#messages {
+    width: 100%  !important;
+    height: 100%;
+    /* height: 100% !important; */
+    position: absolute;
+    /* margin: 0px !important; */
+    left: -15%;
+    top: 0%;
+    overflow:hidden;
+
+}
+
+
+
+
+/*----------  Show Clients  ----------*/
+
+.clients {
+    display: block;
+    width: 100%;
+    height: 168.564583px;
+    padding-top: 30px;
+}
+
+.clients>.container-clients {
+    /* width: 1149.01111px; */
+    height: 104.455556px;
+    margin-left: 6.3%;
+    margin-right: 6.3%;
+}
+
+
+.container-clients>.content-img {
+    display: flex;
+    margin-top: 44px;
+    justify-content: space-between;
+}
+
+/*=====  End of Get Attention  ======*/
+
+
+
+/*==================================
+=            Show Price            =
+====================================*/
+
+
+/*----------  Background  ----------*/
+
+#show-price {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 443.00347222222223px;
+
+}
+
+
+/*----------  Container Card Price  ----------*/
+
+.container-card-price {
+    width: 86.1374123%;
+    margin-top: 92.33125000000001px;
+    margin-bottom: 90.46597222222222px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/*----------  Card Price ----------*/
+
+.card-price {
+    width: 29.7841727%;
+    height: 104%;
+    text-align: center;
+
+}
+
+.card-price>.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #ffff;
+    border-radius: 13.989583333333332px 0px 13.989583333333332px 13.989583333333332px;
+    /* top , right, button, left*/
+    z-index: 2;
+}
+
+.card-price>.container:after {
+    content: "";
+    position: absolute;
+    /* bottom: 0; */
+    /* height: 0; */
+    /* width: 0; */
+    left: 87%;
+    transform: rotate(-45deg);
+    top: -11.1%;
+    border: 30px solid transparent;
+    border-bottom-color: white;
+}
+
+.rectangle {
+    position: relative;
+    top: -53px;
+    right: 16.3211805px;
+    width: 65.28472222222223px;
+    height: 65.28472222222223px;
+    border-radius: 0px 0px 0px 13.989583333333332px;
+    /* top , right, button, left*/
+    object-fit: cover;
+    z-index: 1;
+}
+
+/*----------  Porcent  ----------*/
+
+
+
+.porcent {
+    width: 140px;
+    height: 70px;
+    margin-top: 30px;
+    color: var(--text-shiny);
+    font-size: 46.63194444444445px;
+    font-weight: bold;
+}
+
+
+/*----------  Title  ----------*/
+
+.title-card {
+    width: 240px;
+    height: 30px;
+    font-size: 23.315972222222225px;
+    font-weight: bold;
+    color: #000;
+}
+
+/*----------  Content  ----------*/
+
+.content-card {
+    width: 240px;
+    height: 70px;
+    margin-top: 10px;
+    margin-bottom: -10px;
+    font-style: regular;
+    color: #000;
+    font-size: 13.989583333333332px;
+}
+
+
+/*----------  Double Check  ----------*/
+
+.double-check {
+    margin-top: 6%;
+    margin-left: 80% !important;
+}
+
+
+/*=====  End of Show Price  ======*/
+
+
+
+/*=====================================
+=            Insert Iframe            =
+=======================================*/
+
+
+/*----------  Background  ----------*/
+
+#insert-iframe {
+    width: 100%;
+    height: 818.8569444444445px;
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: center;
+    padding-top: 75.54375px;
+}
+
+
+/*----------  Containers  ----------*/
+
+#insert-iframe>.container {
+    width: 75%;
+    height: 79.72%;
+}
+
+
+.container-iframe {
+    height: 79.2%;
+    border: 16px solid #01022E;
+    border-radius: 13.989583333333332px;
+    margin-top: 47.56458333333333px;
+    margin-bottom: -47.56458333333333px;
+}
+
+/*----------  Text  ----------*/
+
+
+#insert-iframe>.container>.container-text {
+    width: 100%;
+    height: 55.95833333333333px;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+/*----------  Iframe  ----------*/
+
+.container-iframe>iframe {
+    width: 100%;
+    height: 100%;
+    background-color: #FFF;
+
+
+}
+
+/*=====  End of Insert Iframe  ======*/
+
+
+
+/*==============================
+=            Slider            =
+================================*/
+
+/*----------  Background  ----------*/
+
+#slider {
+    width: 100%;
+    height: 900px;
+    display: inline-block;
+    flex-direction: column;
+
+    background-color: #fff;
+}
+
+
+/*----------  Container Slider  ----------*/
+
+
+.container-slider>.slider>#automate {
+    width: 100%;
+    margin-top: 73.67847222222223px;
+
+}
+
+
+
+/*----------  Meet the Posibilities  ----------*/
+
+.meet-posibilities {
+    margin-top: 76px;
+    margin-left: 149.2222222222222px;
+    color: var(--text-shiny);
+    font-weight: bold;
+    font-size: 27.979166666666664px;
+    text-transform: uppercase;
+}
+
+
+
+/*----------  Settings  ----------*/
+
+.container-slider {
+    width: 100%;
+    height: 70%;
+
+}
+
+.slider {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.slider-d-none {
+    display: none !important;
+}
+
+/*----------  Content  ----------*/
+
+.slider-dark {
+    background-color: #F3F3F3 !important;
+}
+
+.slider {
+    overflow: hidden;
+
+}
+
+.container-slider>.slider>#automate,
+.container-slider>.slider>#increase,
+.container-slider>.slider>#retain {
+    display: flex;
+    justify-content: center;
+    margin-top: 76px;
+    height: 65%;
+}
+
+.container-slider>.slider>#automate>.container,
+.container-slider>.slider>#increase>.container,
+.container-slider>.slider>#retain>.container {
+    width: 50%;
+    margin-left: 149.2222222222222px;
+
+}
+
+.container-slider>.slider>#automate>.container>.title,
+.container-slider>.slider>#increase>.container>.title,
+.container-slider>.slider>#retain>.container>.title {
+
+    line-height: 55.95833333333333px;
+    font-size: 37.30555555555555px;
+}
+
+.container-slider>.slider>#automate>.container>.content,
+.container-slider>.slider>#increase>.container>.content,
+.container-slider>.slider>#retain>.container>.content {
+    font-size: 16.7875px;
+    width: 488.7027777777778px;
+    line-height: 32.642361111111114px;
+    margin-top: 7.461111111111111px;
+}
+
+.btn-start-building>a>input {
+    background-color: #4800FF;
+    font-size: 16.7875px;
+    color: #fff;
+    margin-top: 36px;
+    width: 307.7708333333333px;
+    height: 55.95833333333333px;
+    border-radius: 4.663194444444444px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*----------  Image Container ----------*/
+
+
+.container-slider>.slider>#automate>.container-img>img,
+.container-slider>.slider>#increase>.container-img>img,
+.container-slider>.slider>#retain>.container-img>img {
+    width: 543.8310625px;
+    margin-top: -90px;
+    border-radius: 0px 0px 0px 45px;
+}
+
+.container-img-mobile {
+    display: none;
+}
+/*----------  Container Buttons  ----------*/
+
+.container-buttons {
+    display: inline-flex;
+    height: 69.94791666666667px;
+    margin-left: 145.49166666666667px;
+}
+
+.container-buttons>input {
+    width: 156.68333333333334px;
+    height: 69.94791666666667px;
+    margin-right: 33.575px;
+    border-radius: 46.63194444444445px;
+    border: 1px solid var(--bg-btn-slider);
+
+    color: var(--bg-btn-slider);
+    font-size: 18.652777777777775px;
+}
+
+
+.container-buttons>input:hover,
+.container-buttons>.active {
+    cursor: pointer;
+    background-color: var(--bg-btn-slider);
+    font-weight: bold;
+    color: #fff;
+}
+
+/*=====  End of Slider  ======*/
+
+
+
+/*=========================================
+=            Predictive Models            =
+===========================================*/
+
+/*----------  Background  ----------*/
+
+#predictive-models {
+    width: 100%;
+    height: 707.8729166666667px;
+    background-color: #F3F3F3;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.container-pm {
+    width: 70%;
+    height: 100%;
+    margin-left: 145.49166666666667px;
+}
+
+.container-pm>.title-pm {
+    margin-top: 61.55416666666666px;
+    font-size: 27.979166666666664px;
+    font-weight: bold;
+    color: var(--text-shiny);
+    text-transform: uppercase;
+}
+
+.container-pm>.profile-img {
+
+    margin-top: 33.575px;
+}
+
+.profile-img>img {
+    height: 169.74027777777778px;
+    width: 169.74027777777778px;
+    border-radius: 999px;
+}
+
+
+.container-pm>.container-text {
+    width: 847.76875px;
+    height: 178.1340277777778px;
+    font-size: 37.30555555555555px;
+}
+
+.container-pm>.content-likedin {
+    display: flex;
+    margin-top: 12.124305555555555px;
+    width: 532.5368055555555px;
+    height: 12.124305555555555px;
+}
+
+.container-pm>.content-likedin>.text>a {
+    color: #0077B5;
+}
+
+.container-pm>.content-likedin>.text {
+    height: 31.709722222222222px;
+    margin-left: 14.922222222222222px;
+    font-size: 18.2px;
+
+}
+
+.container-pm>.loading img {
+    display: block;
+    margin-top: 62px;
+    width: 85.80277777777778px;
+    height: 19.71598611111111px;
+}
+
+#predictive-models>.container-circle {
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#predictive-models>.container-circle>.circle {
+
+    position: relative;
+    margin-top: 440px;
+    margin-left: 130px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    /* margin-left: 84%; */
+    /* margin-top: 35%; */
+    border: 139.89583333333334px solid #fff;
+    background-color: #F3F3F3;
+}
+
+/*=====  End of Predictive Models  ======*/
+
+
+
+/*=============================================
+=            Contact Email            =
+=============================================*/
+
+
+/*----------  Background  ----------*/
+
+#contact-email {
+    width: 100%;
+    height: 416.88958333333335px;
+    margin-bottom: -121.243055556px;
+
+}
+
+
+
+/*----------  Title  ----------*/
+
+#contact-email>.content-text {
+    width: 561.4486111111112px;
+    height: 64.35208333333334px;
+    margin-top: 96.99444444444444px;
+    margin-left: 145.49166666666667px;
+    font-size: 37.30555555555555px;
+}
+
+/*----------  Get Email  ----------*/
+
+
+.content-get-email>form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24.24861111111111px !important;
+    margin-left: 11.6206869%;
+    margin-right: 11.6206869%;
+    /* width: 1044.5555555555557px  !important; */
+    height: 111.91666666666666px !important;
+    background-color: white;
+    border: solid #475a6998;
+    border-width: 0.9px;
+    border-radius: 4.66319444px;
+    padding-right: 8.39375px;
+
+}
+
+.content-get-email>form>input {
+    width: 56%;
+    height: 90%;
+    border: none;
+    font-size: 14.922222222222222px;
+    padding-left: 30px;
+}
+
+.content-get-email>form>button {
+    height: 93.2638888888889px;
+    width: 247.14930555555557px;
+    background-color: var(--bg-btn-contact);
+    border: transparent;
+    border-radius: 13.989583333333332px;
+    font-size: 23.315972222222225px;
+    font-weight: bold;
+    color: #fff;
+}
+
+/*=====  End of Contact Email  ======*/
+
+
+
+/*==============================
+=            Footer            =
+================================*/
+
+
+/*----------  Background  ----------*/
+
+
+
+footer {
+    background-color: var(--bg-footer);
+    width: 100%;
+    padding-top: 27.04652777777778px;
+    margin-top: 10px;
+}
+
+
+/*----------  Top  ----------*/
+
+.footer-top {
+    /* width: 1168.5965277777777px; */
+    height: 461.8334513888889px;
+    margin-left: 74.6111111111px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.container-tlsw {
+    width: 259.2736111111111px;
+    height: 100px;
+}
+
+
+/*----------  Language  ----------*/
+
+
+
+.container-tlsw>.language>ul {
+    display: flex;
+    width: 100%;
+    margin-top: 89.53333333333333px;
+    justify-content: space-between;
+}
+
+.container-tlsw>.language>ul>li>a {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 9.326388888888888px;
+    border-radius: 5.595833333333333px;
+    padding-left: 12.124305555555555px;
+    padding-right: 17.72013888888889px;
+    padding-top: 7.461111111111111px;
+    padding-bottom: 7.461111111111111px;
+    text-transform: uppercase;
+    border: 1px solid #1B1C43;
+}
+
+.container-tlsw>.language>ul>li>a:hover {
+    background-color: #1B1C43;
+}
+
+.container-tlsw>.language>ul>li>a>div {
+    font-size: 14.922222222222222px;
+    width: 16.7875px;
+    height: 22.383333333333333px;
+    margin-left: 11.191666666666666px;
+}
+
+
+/*----------  Social Web  ----------*/
+
+.social-web {
+    margin-top: 28.911805555555556px;
+}
+
+.social-web>.title {
+    margin-bottom: 28.911805555555556px;
+}
+
+/*----------  Products - Company - Dev & Support  ----------*/
+
+
+.container-products {
+    width: 171.60555555555555px;
+    margin-top: 56.8909722222px;
+
+}
+
+.content-products {
+    width: 241.5534722222222px;
+
+}
+
+.container-ds {
+    width: 285.3875px;
+    height: 311.5013888888889px;
+    margin-top: 56.8909722222px;
+}
+
+
+
+
+/*----------  Company  ----------*/
+.container-company {
+    width: 153.88541666666666px;
+    margin-top: 56.8909722222px;
+}
+
+/*----------  Developers & Investors  ----------*/
+
+.investors {
+    margin-top: 46.63194444444445px;
+    font-size: 16.7875px;
+    width: 285.3875px;
+    height: 149.2222222222222px;
+}
+
+/*----------  General Footer Top  ----------*/
+
+
+
+.footer-top .p {
+    font-size: 14.922222222222222px;
+    margin-top: 22.383333333333333px;
+    color: #B4C0CA;
+}
+
+.container-products>.title,
+.container-company>.title,
+.content-developers>.title,
+.investors>.title {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 21.450694444444444px;
+    font-size: 16.7875px;
+}
+
+
+
+/*----------  Suscribe  ----------*/
+
+.footer-suscribe {
+    width: 100%;
+    height: 140.1849513888889px;
+    background-color: #000;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-suscribe>.content {
+    width: 915.8513888888889px;
+    height: 52.806013888888884px;
+    margin-left: 74.6111111111px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-suscribe>.content>.title {
+    color: #fff;
+    margin-right: 152.02013888888888px;
+    font-size: 13.989583333333332px;
+}
+
+.footer-suscribe>.content>.suscribe,
+.footer-suscribe>.content>.suscribe>form {
+    height: 100%;
+
+}
+
+.footer-suscribe>.content>.suscribe>form>input {
+    width: 211.70902777777778px;
+    border: none;
+    padding-left: 30px;
+    border-radius: 4.663194444444444px 0px 0px 4.663194444444444px;
+    height: 100%;
+}
+
+.footer-suscribe>.content>.suscribe>form>button {
+    width: 211.70902777777778px;
+    border: none;
+    margin-left: -3.5px !important;
+    border-radius: 0px 4.663194444444444px 4.663194444444444px 0px;
+    height: 100%;
+    background-color: #0070FF;
+    color: #fff;
+}
+
+
+/*----------  Bottom  ----------*/
+
+.footer-bottom {
+    width: 100%;
+    height: 81.61522916666667px;
+    display: flex;
+    align-items: center;
+
+}
+
+.footer-bottom>#copyright {
+
+    margin-left: 74.6111111111px;
+    margin-right: 319.8951388888889px;
+}
+
+.footer-bottom>.info>ul {
+    display: flex;
+}
+
+.footer-bottom>.info>ul>li {
+    margin-right: 52.22777777777778px;
+}
+
+/*=====  End of Footer  ======*/
+
+
+/*===================================
+=            Big Display            =
+=====================================*/
+
+@media screen and (max-width:1262px) {
+
+
+
+    html {
+        font-size: 15px;
+        
+    }
+    .nav-pc>ul {
+
+        display: flex;
+        margin-left: 56px;
+    }
+
+
+    /*----------  TEXT  ----------*/
+
+
+    .cap-title>h3 > b{
+        font-size: 1.8em;
+        line-height: 1.5em;
+    }
+
+    .capture-text>.p-text {
+        font-size: 0.8em;
+        line-height: 2em;
+    }
+    
+    .get-email>button {
+        font-size: 0.83em;
+    }
+
+    .messages>.sent>.text {
+        
+        font-size: 0.9em;
+    }
+    
+    .messages>.received>.text {
+        
+        font-size: 0.9em;
+    }
+
+    .footer-bottom {
+        font-size: 0.8em;    
+    }
+    
+}
+/*=====  End of Big Display  ======*/
