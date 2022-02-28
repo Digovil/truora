@@ -1,29 +1,29 @@
 
 /*----------  Header Menu  ----------*/
-let btnBurger   = document.querySelector('#burger');
-let menuMobile  = document.querySelector('.container-menu-mobile');
+var btnBurger   = document.querySelector('#burger');
+var menuMobile  = document.querySelector('.container-menu-mobile');
 
 
 /*----------  Submenu  ----------*/
-let solutions = document.querySelector('#solutions');
-let developers = document.querySelector('#developers');
-let resources = document.querySelector('#resources');
+var solutions = document.querySelector('#solutions');
+var developers = document.querySelector('#developers');
+var resources = document.querySelector('#resources');
 
 
 /*----------  Slider  ----------*/
-let slider   =  document.querySelector('#slider');
-let automate =  document.querySelector('#automate');
-let retain   =  document.querySelector('#retain');
-let increase =  document.querySelector('#increase');
+var slider   =  document.querySelector('#slider');
+var automate =  document.querySelector('#automate');
+var retain   =  document.querySelector('#retain');
+var increase =  document.querySelector('#increase');
 
 /*----------  Btns Slider  ----------*/
-let btnAutomate =  document.querySelector('#btn-automate');
-let btnRetain   =  document.querySelector('#btn-retain');
-let btnIncrease =  document.querySelector('#btn-increase');
+var btnAutomate =  document.querySelector('#btn-automate');
+var btnRetain   =  document.querySelector('#btn-retain');
+var btnIncrease =  document.querySelector('#btn-increase');
 
 
 /*----------  Get Full Year  ----------*/
-let copyRight = document.querySelector("#copyright");
+var copyRight = document.querySelector("#copyright");
 
 
 loadEventListerner();
@@ -68,12 +68,13 @@ function loadEventListerner(){
     
     /*----------  Footer  ----------*/
     addHtmlCopyRight();
+
     
-    
+
 }
 
 function menuResponsive(){
-    let ban;
+    var ban;
 
     menuMobile.classList.forEach(resp =>{
 
