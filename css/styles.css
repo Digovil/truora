@@ -703,13 +703,6 @@ nav>ul a:hover {
 /*----------  Container Slider  ----------*/
 
 
-.container-slider>.slider>#automate {
-    /* width: 100%; */
-    /* margin-top: 73.67847222222223px; */
-
-}
-
-
 
 /*----------  Meet the Posibilities  ----------*/
 
@@ -824,7 +817,7 @@ nav>ul a:hover {
 
 .container-slider>.slider>#automate>.container>.container-img>#automate-img,
 .container-slider>.slider>#increase>.container>.container-img>#increase-img,
-.container-slider>.slider>#retain>.container>.container-img>#retain-img {
+.container-slider>.slider>#retain>.container>.container-img>.retain-img {
     /* width: 543.8310625px; */
     /* margin-top: -90px; */
     /* width: 100%; */
@@ -838,6 +831,15 @@ nav>ul a:hover {
     border-radius: 0px 0px 0px 45px;
 
 }
+
+img.retain-img{
+    display: none;                        
+}
+
+object.retain-img{
+    display: block;
+}
+
 
 /*----------  Container Buttons  ----------*/
 
@@ -1306,10 +1308,6 @@ footer {
 
 /*----------  Loading  ----------*/
 
-#messages> #Frame2  > #Group6960 > #Union_3 { /*container*/
-    /* animation: moveMessages 2s .3s both infinite; */
-}
-
 
 /* Elipse 1*/
 #messages> #Frame2  > #Group6960 > #Ellipse15 {
@@ -1324,6 +1322,41 @@ footer {
     animation: loadingImg 1s linear 0.9s infinite;
 
 }
+
+
+/*----------  Slider  ----------*/
+
+
+
+#automate-img > #Group6987 > #MaskGroup > #ashak > #App-01 > #Conversation > #Item-01 {
+    transform: translateX(50%);
+    animation: moveMessages 3s .5s both infinite;
+
+}
+
+#automate-img > #Group6987 > #MaskGroup > #ashak > #App-01 > #Conversation > #Item-02 {
+    transform: translateX(50%);
+    animation: moveMessages 3s .5s both infinite;
+}
+
+#automate-img > #Group6987 > #MaskGroup > #ashak > #App-01 > #Conversation > #Item-02_2 {
+    transform: translateX(50%);
+    animation: moveMessages 3s .5s both infinite;
+}
+
+#automate-img > #Group6987 > #MaskGroup > #ashak > #App-01 > #Conversation > #Drag-01 {
+    transform: translateX(50%);
+    animation: moveMessages 3s .5s both infinite;
+}
+
+
+#increase-img > #Section-02 > #figure-01 > #App-02 {
+    transform: translateX(50%);
+    animation: moveMessages 3s .5s both infinite;
+}
+
+
+/* retain-img>retain>Alert 1>Grupo 199>Group */
 
 @keyframes showMessages {
 
@@ -1341,16 +1374,12 @@ footer {
 
 @keyframes moveMessages {
 
-    0% {
-        transform: unset;
-    }
-    50% {
-        transform:translateY(2%);
-    }
     100% {    
         transform:unset;
     }
 }
+
+
 @keyframes loadingImg {
     0% {
         transform: unset;
@@ -1873,13 +1902,20 @@ footer {
 
     .container-slider>.slider>#automate>.container>.container-img>#automate-img,
     .container-slider>.slider>#increase>.container>.container-img>#increase-img,
-    .container-slider>.slider>#retain>.container>.container-img>#retain-img {
+    .container-slider>.slider>#retain>.container>.container-img>.retain-img {
         overflow: hidden;
         width: 80%;
         border-radius: 0px 0px 0px 45px;
 
     }
 
+    img.retain-img{
+        display: block;                        
+    }
+
+    object.retain-img{
+        display: none;
+    }
     /*----------  Models  ----------*/
     .container-pm {
         width: 90%;
